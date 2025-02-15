@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import du Link
 
-
 const SettingsPage = () => {
   return (
     <div className="font-sans w-screen">
@@ -11,7 +10,7 @@ const SettingsPage = () => {
           <div className="card bg-pink-400 shadow-lg w-full h-full rounded-3xl absolute transform rotate-6"></div>
           <div className="relative w-full rounded-3xl px-6 py-6 bg-gray-100 shadow-md">
             <h2 className="text-center text-3xl font-bold text-gray-700 mb-6">Your Profile</h2>
-            
+
             <div className="flex flex-col items-center space-y-5">
               <img
                 className="object-cover w-32 h-32 p-1 rounded-full ring-4 ring-indigo-300"
@@ -19,29 +18,41 @@ const SettingsPage = () => {
                 alt="Avatar"
               />
               <div className="flex space-x-4">
-                <button className="py-2 px-4 text-white bg-orange-300 hover:bg-pink-500 rounded-lg shadow-lg ">
+                <button className="py-2 px-4 text-white bg-orange-300 hover:bg-pink-500 rounded-lg shadow-lg">
                   Change Picture
                 </button>
               </div>
             </div>
 
             <div className="mt-8 space-y-4">
-              <input type="text" placeholder="First Name" className="w-full p-3 bg-indigo-50 border border-indigo-300 rounded-lg text-gray-900" />
-              <input type="text" placeholder="Last Name" className="w-full p-3 bg-indigo-50 border border-indigo-300 rounded-lg text-gray-900" />
-              <input type="email" placeholder="Your Email" className="w-full p-3 bg-indigo-50 border border-indigo-300 rounded-lg text-gray-900" />
+              <input
+                type="text"
+                placeholder="First Name"
+                className="w-full p-3 bg-indigo-50 border border-indigo-300 rounded-lg text-gray-900"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                className="w-full p-3 bg-indigo-50 border border-indigo-300 rounded-lg text-gray-900"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full p-3 bg-indigo-50 border border-indigo-300 rounded-lg text-gray-900"
+              />
             </div>
-            
-            <div className="flex justify-center gap-4 mt-6">
-              <button className="text-white bg-orange-300 hover:bg-pink-500 font-medium rounded-lg text-lg px-6 py-3 shadow-lg">
-                Save
-              </button>
-              <Link to="/login">
-              <button className="text-white bg-orange-300 hover:bg-pink-500 font-medium rounded-lg text-lg px-6 py-3 shadow-lg">
 
-              Logout
-            </button>
-          </Link>
-         
+            <div className="mt-6 space-x-2">
+              <Link to="/backhome">
+                <button className="text-white bg-orange-300 hover:bg-pink-500 font-small rounded-lg text-lg px-4 py-3 shadow-lg">
+                  Save Changes
+                </button>
+              </Link>
+              <Link to="/login">
+                <button className="text-white bg-orange-300 hover:bg-pink-500 font-small rounded-lg text-lg px-4 py-3 shadow-lg">
+                  Logout
+                </button>
+              </Link>
             </div>
           </div>
         </div>
