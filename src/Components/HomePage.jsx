@@ -24,6 +24,8 @@ const HomePage = () => {
   const [replyMessage, setReplyMessage] = useState('');
   const [replyingTo, setReplyingTo] = useState(null);
   const [messages, setMessages] = useState(SAMPLE_MESSAGES);
+  const [showBubble, setShowBubble] = useState(false);
+  const [userInput, setUserInput] = useState('');
 
   const toggleExpand = (category) => {
     setExpanded((prev) => ({ ...prev, [category]: !prev[category] }));
@@ -58,7 +60,18 @@ const HomePage = () => {
   };
 
   const handlePopupToggle = () => {
-    // Toggle popup visibility
+    setShowBubble(!showBubble);
+  };
+
+  const handleUserInputChange = (e) => {
+    setUserInput(e.target.value);
+  };
+
+  const handleUserInputSubmit = (e) => {
+    if (e.key === 'Enter') {
+      setShowBubble(false);  // Close bubble when enter is pressed
+      setUserInput('');  // Reset input field
+    }
   };
 
   return (
@@ -91,12 +104,11 @@ const HomePage = () => {
                     </div>
                     <p className="mt-2 text-sm text-gray-700">{message.content}</p>
 
-                    {/* Add the reply bubble positioned near the message */}
+                    {/* Reply bubble */}
                     {replyingTo && replyingTo.id === message.id && (
                       <div className="absolute left-0 top-8 ml-8 w-3/4 bg-blue-300 text-white p-3 rounded-lg max-w-xs z-10">
                         <div className="flex justify-between items-center">
                           <span>Replying to: {message.from}</span>
-                          <button className="text-xs text-white" onClick={() => setReplyingTo(null)}>Cancel</button>
                         </div>
                         <textarea
                           value={replyMessage}
@@ -129,6 +141,20 @@ const HomePage = () => {
         })}
       </div>
 
+      {/* Popup bubble for adding username or number */}
+      {showBubble && (
+        <div className="fixed bottom-150 left-1/2 transform -translate-x-1/2 bg-blue-300 p-4 rounded-lg shadow-xl w-3/4 max-w-xs z-20">          <input
+            type="text"
+            value={userInput}
+            onChange={handleUserInputChange}
+            onKeyDown={handleUserInputSubmit}
+            className="w-full p-2 bg-blue-200 rounded-lg text-sm"
+            placeholder="Enter username or number..."
+          />
+        </div>
+      )}
+
+      {/* Bottom navigation bar */}
       <div className="fixed bottom-0 left-0 w-full bg-no-repeat bg-gradient-to-r from-pink-200 to-orange-200 p-4 shadow-lg">
         <div className="max-w-lg mx-auto flex justify-center gap-4">
           <Link to="/home/google-calendar">
