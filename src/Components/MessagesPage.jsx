@@ -10,7 +10,7 @@ const MessagesPage = () => {
               <div className="card bg-orange-400 shadow-lg w-full h-full rounded-3xl absolute transform -rotate-6"></div>
               <div className="card bg-pink-400 shadow-lg w-full h-full rounded-3xl absolute transform rotate-6"></div>
               <div className="relative w-full rounded-3xl px-6 py-4 bg-gray-100 shadow-md">
-                <label className="block mt-3 text-sm text-gray-700 text-center font-semibold text-3xl">
+                <label className="block mt-3  text-gray-700 text-center font-semibold text-xl">
                   Who do you want to chat with ? 
                 </label>
                 <form onSubmit={(e) => e.preventDefault()} className="mt-10">
