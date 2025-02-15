@@ -6,6 +6,8 @@ import HomePage from './Components/HomePage';
 import MessagesPage from './Components/MessagesPage';
 import SettingsPage from './Components/SettingsPage';
 import GoogleCalendar from './Components/GoogleCalendar';
+import Discord from './Components/Discord';
+import Slack from './Components/Slack';
 function App() {
 
   return (
@@ -20,6 +22,11 @@ function App() {
           <Route path="/home/messages" element={<MessagesPage />} />
           <Route path="/home/settings" element={<SettingsPage />} />
           <Route path="/home/google-calendar" element={<GoogleCalendar />} />
+
+          {/* Sous-pages de MessagesPage */}
+          <Route path="/home/discord" element={<Discord />} />
+          <Route path="/home/slack" element={<Slack />} />
+          <Route path="/backhome" element={<HomePage />} />
         </Routes>
       </div>
     </Router>
