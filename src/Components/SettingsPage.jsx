@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"; // Import du Link
 const SettingsPage = () => {
   return (
     <div className="font-sans w-screen">
-      <div className="relative min-h-screen flex flex-col sm:justify-center items-center bg-gradient-to-r from-purple-600 to-orange-600 via-pink-600 via-orange-800 via-yellow-600">
+      <div className="relative min-h-screen flex flex-col sm:justify-center items-center bg-gradient-to-r from-pink-200 to-orange-200">
         <div className="relative sm:max-w-lg w-full">
           <div className="card bg-orange-400 shadow-lg w-full h-full rounded-3xl absolute transform -rotate-6"></div>
           <div className="card bg-pink-400 shadow-lg w-full h-full rounded-3xl absolute transform rotate-6"></div>
@@ -19,7 +19,7 @@ const SettingsPage = () => {
                 alt="Avatar"
               />
               <div className="flex space-x-4">
-                <button className="py-2 px-4 text-white bg-indigo-600 rounded-lg shadow-lg hover:bg-indigo-800">
+                <button className="py-2 px-4 text-white bg-orange-300 hover:bg-pink-500 rounded-lg shadow-lg ">
                   Change Picture
                 </button>
               </div>
@@ -32,11 +32,11 @@ const SettingsPage = () => {
             </div>
             
             <div className="flex justify-center gap-4 mt-6">
-              <button className="text-white bg-indigo-700 hover:bg-indigo-800 font-medium rounded-lg text-lg px-6 py-3 shadow-lg">
+              <button className="text-white bg-orange-300 hover:bg-pink-500 font-medium rounded-lg text-lg px-6 py-3 shadow-lg">
                 Save
               </button>
               <Link to="/login">
-              <button className="text-white bg-indigo-700 hover:bg-indigo-800 font-medium rounded-lg text-lg px-6 py-3 shadow-lg">
+              <button className="text-white bg-orange-300 hover:bg-pink-500 font-medium rounded-lg text-lg px-6 py-3 shadow-lg">
 
               Logout
             </button>
