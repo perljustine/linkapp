@@ -27,6 +27,9 @@ function App() {
           <Route path="/home/discord" element={<Discord />} />
           <Route path="/home/slack" element={<Slack />} />
           <Route path="/backhome" element={<HomePage />} />
+
+           {/* Settings */}
+           <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </Router>

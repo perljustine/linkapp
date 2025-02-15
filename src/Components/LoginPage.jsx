@@ -5,7 +5,7 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center w-screen bg-gradient-to-r from-purple-500 to-pink-500">
       <div className="bg-gray-800 bg-opacity-50 shadow-md rounded-lg px-8 py-6 max-w-md backdrop-blur-md">
-        <h1 className="text-2xl font-bold text-center mb-4 text-white">Welcome Back!</h1>
+        <h1 className="text-2xl font-bold text-center mb-4 text-white">Hi there!</h1>
         <form action="#">
           <div className="mb-4">
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">

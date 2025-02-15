@@ -11,7 +11,7 @@ const MessagesPage = () => {
               <div className="card bg-pink-400 shadow-lg w-full h-full rounded-3xl absolute transform rotate-6"></div>
               <div className="relative w-full rounded-3xl px-6 py-4 bg-gray-100 shadow-md">
                 <label className="block mt-3 text-sm text-gray-700 text-center font-semibold text-3xl">
-                  Home Page
+                  Who do you want to chat with ? 
                 </label>
                 <form onSubmit={(e) => e.preventDefault()} className="mt-10">
                   
@@ -19,7 +19,7 @@ const MessagesPage = () => {
                   <div className="mt-7">
                     <Link to="/home/discord">
                       <button className="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
-                        DISCORD
+                        Discord
                       </button>
                     </Link>
                   </div>
@@ -28,7 +28,7 @@ const MessagesPage = () => {
                   <div className="mt-7">
                     <Link to="/home/slack">
                       <button className="bg-purple-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
-                        SLACK
+                        Slack
                       </button>
                     </Link>
                   </div>
@@ -37,7 +37,7 @@ const MessagesPage = () => {
                   <div className="mt-7">
                     <Link to="/backhome">
                       <button className="bg-yellow-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
-                        GO BACK
+                        Go Back Home
                       </button>
                     </Link>
                   </div>
