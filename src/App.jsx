@@ -31,6 +31,15 @@ function App() {
            {/* Settings */}
            <Route path="/login" element={<LoginPage />} />
            <Route path="/backhome" element={<HomePage />} />
+
+
+          {/* Settings */}
+           <Route path="/backhome" element={<HomePage />} />
+
+
+
+           
+
         </Routes>
       </div>
     </Router>

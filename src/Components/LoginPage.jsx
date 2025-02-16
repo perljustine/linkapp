@@ -4,8 +4,12 @@ import { Link } from "react-router-dom";
 const LoginPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center w-screen bg-gradient-to-r from-orange-100 to-pink-200">
-      <div className="bg-orange-300 bg-opacity-50 shadow-lg rounded-lg px-8 py-8 max-w-md backdrop-blur-md">
-        {/* 🎨 Amélioration du titre */}
+      <div className="bg-rose-300 bg-opacity-50 shadow-lg rounded-lg px-8 py-8 max-w-md backdrop-blur-md">
+        {/* Logo au-dessus du titre */}
+        <div className="flex justify-center mb-4">
+          <img src="src/images/BLANCLOGO.png" alt="Logo" className="h-16" />
+        </div>
+
         <h1 className="text-2xl font-extrabold text-center mb-6 text-white drop-shadow-md">
           Welcome Back! 
         </h1>
@@ -62,7 +66,6 @@ const LoginPage = () => {
             </label>
           </div>
 
-          {/* 🚀 Bouton amélioré */}
           <Link to="/home">
             <button
               type="button"
